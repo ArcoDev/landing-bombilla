@@ -1,0 +1,78 @@
+.icons-seo {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    @include grid(1);
+    place-items: center;
+
+    @include tablet {
+        height: auto;
+        padding: 3rem 0;
+    }
+}
+
+.box-seo {
+    width: 100%;
+    @include flexbox(space-evenly, center, row);
+
+    @include mobile {
+        @include flexbox(space-evenly, center, column);
+    }
+
+    
+
+    .info-seo {
+        @include flexbox(center, center, column);
+
+        img {
+            width: 172px;
+            height: 172px;
+            object-fit: cover;
+
+            @include mobile {
+                width: 100px;
+                height: 100px;
+            }
+
+            @include tablet {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .img2 {
+            margin-top: -3rem;
+            @include mobile {
+                margin: 0;
+            }
+            @include tablet {
+                margin: 0;
+            }
+        }
+
+        h2 {
+            font: normal normal 700 2rem/45px $nunito;
+            text-transform: uppercase;
+            text-align: center;
+
+            @include mobile {
+                font: normal normal 700 1rem/45px $nunito;
+                margin-top: -.5rem;
+            }
+
+            @include tablet {
+                font: normal normal 700 1rem/45px $nunito;
+            }
+        }
+        @include mobile {
+            br {
+                display: none;
+            }
+        }
+        @include tablet {
+            br {
+                display: none;
+            }
+        }
+    }
+}

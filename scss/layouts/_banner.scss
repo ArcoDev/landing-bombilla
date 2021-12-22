@@ -1,0 +1,16 @@
+.banner {
+    @include card(100%, auto, url('../../img/banner.png'));
+    @include flexbox(center, center, column);
+    color: $tertiary;
+    text-align: center;
+    padding: 5rem 0;
+
+    h2 {
+        font: normal normal 700 2.8rem/50px $nunito;
+
+    }
+    @include boxList;
+    .box-list {
+        gap: 7rem;
+    }
+}

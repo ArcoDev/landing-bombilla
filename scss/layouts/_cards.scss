@@ -1,0 +1,20 @@
+.box-card {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    @include flexbox(center, center, row);
+    gap: 1rem;
+
+    .card {
+        @include card(561px, 590px, url('../../img/card-desing.png'));
+        @include flexbox(center, center, column);
+        border-radius: 9px;
+        color: $tertiary;
+        text-align: center;
+        &:nth-child(2) {
+            @include card(561px, 590px, url('../../img/card-ecommerce.png'));
+
+        }
+        @include boxList;
+    }
+}

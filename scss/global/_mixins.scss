@@ -1,0 +1,54 @@
+// GRID
+@mixin grid($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
+// FLEXBOX  
+@mixin flexbox($positionH, $positionV, $direction) {
+    display: flex;
+    justify-content: $positionH;
+    align-items: $positionV;
+    flex-direction: $direction;
+}
+
+
+//MEDIA QUERYS
+@mixin mobile {
+    @media screen and (max-width: $screen-xs){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+        @content;
+    }
+}
+
+//BOX LIST
+@mixin boxList {
+    .box-list {
+        @include flexbox(flex-start, flex-start, row);
+        gap: 1.5rem;
+
+        .item {
+            @include flexbox(flex-start, center, row);
+            gap: .3rem;
+            margin-bottom: 1rem;
+            .text-item {
+                margin: 0;
+            }
+        }
+
+    }
+}
+
+// CARD
+@mixin card($width, $height, $background) {
+    width: $width;
+    height: $height;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: $background;
+}
