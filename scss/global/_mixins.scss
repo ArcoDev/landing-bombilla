@@ -30,6 +30,9 @@
     .box-list {
         @include flexbox(flex-start, flex-start, row);
         gap: 1.5rem;
+        @include mobile {
+            flex-direction: column;
+        }
 
         .item {
             @include flexbox(flex-start, center, row);

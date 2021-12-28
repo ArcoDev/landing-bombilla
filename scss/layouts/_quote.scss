@@ -4,18 +4,52 @@
     padding: 5rem 0;
     background-color: $fondo;
     @include flexbox(flex-start, flex-start, row);
+
+    @include mobile {
+        flex-direction: column;
+        padding: 3rem 0;
+        overflow-x: hidden;
+    }
+    @include tablet {
+        flex-direction: column;
+        padding: 3rem 0;
+    }
 }
 
 .info-quote {
     width: 70%;
     @include flexbox(center, center, column);
 
+    @include mobile {
+        width: 100%;
+    }
+    @include tablet {
+        width: 100%;
+
+    }
+
     .box-quote {
         width: 70%;
+
+        @include mobile {
+            width: 90%;
+        }
+        @include tablet {
+            width: 90%;
+        }
 
         h2 {
             font: normal normal 700 2.813rem/60px $nunito;
             text-transform: uppercase;
+
+            @include mobile {
+                font: normal normal 700 1.3rem/25px $nunito;
+
+            }
+            @include tablet {
+                font: normal normal 700 2.3rem/45px $nunito;
+
+            }
 
             span {
                 color: $primary;
@@ -25,6 +59,11 @@
         p {
             font: normal normal 600 1.125rem/30px $nunito;
             color: $paragraph;
+
+            @include mobile {
+                font: normal normal 600 1rem/30px $nunito;
+
+            }
         }
 
         @include boxList;
@@ -36,6 +75,14 @@
     display: grid;
     place-items: center;
     padding-right: 8rem;
+
+    @include mobile {
+        width: 100%;
+    }
+    @include tablet {
+        width: 100%;
+
+    }
 
     h2 {
         margin: 0;

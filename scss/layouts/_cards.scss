@@ -5,16 +5,40 @@
     @include flexbox(center, center, row);
     gap: 1rem;
 
+    @include mobile {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    @include tablet {
+        flex-direction: column;
+    }
+
     .card {
         @include card(561px, 590px, url('../../img/card-desing.png'));
         @include flexbox(center, center, column);
         border-radius: 9px;
         color: $tertiary;
         text-align: center;
+        padding: 0 1rem;
+
+        @include mobile {
+            @include card(350px, 590px, url('../../img/card-desing.png'));
+            border-radius: 0;
+        }
+
         &:nth-child(2) {
             @include card(561px, 590px, url('../../img/card-ecommerce.png'));
 
+            @include mobile {
+                @include card(350px, 590px, url('../../img/card-ecommerce.png'));
+                border-radius: 0;
+            }
         }
+
         @include boxList;
+
+        .second-icon {
+            margin-top: -4rem;
+        }
     }
 }
