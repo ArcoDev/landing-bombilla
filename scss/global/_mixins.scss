@@ -25,6 +25,12 @@
     }
 }
 
+@mixin laptop {
+    @media screen and (min-width: $screen-md) and (max-width: $screen-xxl) {
+        @content;
+    }
+}
+
 //BOX LIST
 @mixin boxList {
     .box-list {

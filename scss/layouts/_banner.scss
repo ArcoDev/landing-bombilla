@@ -9,7 +9,9 @@
         font: normal normal 700 2.8rem/50px $nunito;
 
     }
+
     @include boxList;
+
     .box-list {
         gap: 7rem;
     }

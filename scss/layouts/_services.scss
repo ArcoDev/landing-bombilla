@@ -1,4 +1,4 @@
-.icons-seo {
+.services {
     width: 100%;
     height: auto;
     padding: 5rem 0;
@@ -19,7 +19,7 @@
         @include flexbox(space-evenly, center, column);
     }
 
-    
+
 
     .info-seo {
         @include flexbox(center, center, column);
@@ -42,9 +42,11 @@
 
         .img2 {
             margin-top: -3rem;
+
             @include mobile {
                 margin: 0;
             }
+
             @include tablet {
                 margin: 0;
             }
@@ -64,11 +66,13 @@
                 font: normal normal 700 1rem/45px $nunito;
             }
         }
+
         @include mobile {
             br {
                 display: none;
             }
         }
+
         @include tablet {
             br {
                 display: none;

@@ -10,6 +10,7 @@
         padding: 3rem 0;
         overflow-x: hidden;
     }
+
     @include tablet {
         flex-direction: column;
         padding: 3rem 0;
@@ -23,6 +24,7 @@
     @include mobile {
         width: 100%;
     }
+
     @include tablet {
         width: 100%;
 
@@ -34,6 +36,7 @@
         @include mobile {
             width: 90%;
         }
+
         @include tablet {
             width: 90%;
         }
@@ -46,6 +49,7 @@
                 font: normal normal 700 1.3rem/25px $nunito;
 
             }
+
             @include tablet {
                 font: normal normal 700 2.3rem/45px $nunito;
 
@@ -79,6 +83,7 @@
     @include mobile {
         width: 100%;
     }
+
     @include tablet {
         width: 100%;
 
@@ -128,7 +133,7 @@
             transition: .5s ease-out;
 
             &:hover {
-                background-color: lighten($primary, 5%);
+                box-shadow: 0 7px 21px rgb(0 0 0 / 20%);
             }
         }
     }

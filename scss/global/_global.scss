@@ -1,8 +1,19 @@
+*,
+html {
+    scroll-behavior: smooth;
+
+}
+
 body {
     font-size: 16px;
     font-family: $nunito;
     overflow-x: hidden;
+
     a {
         text-decoration: none;
+    }
+
+    li {
+        list-style: none;
     }
 }

@@ -5,7 +5,7 @@
     background-color: $footer;
     @include flexbox(center, center, column);
     gap: 1rem;
-   
+
 
     .separator {
         width: 100%;
@@ -16,13 +16,19 @@
     .box-social {
         @include flexbox(center, center, row);
         gap: 5rem;
+
         @include mobile {
             gap: 2rem;
         }
     }
 
-    p, a{
+    p,
+    a {
         color: $tertiary;
         margin: 0;
+    }
+
+    a:hover {
+        color: $primary;
     }
 }
