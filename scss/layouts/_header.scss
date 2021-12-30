@@ -6,6 +6,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include mobile {
+        height: 600px;
+        overflow-x: hidden;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -13,6 +18,11 @@
         height: 100vh;
         background-color: $primary;
         opacity: 0.9;
+
+        @include mobile {
+            height: 600px;
+        }
+
     }
 }
 
@@ -21,18 +31,62 @@
     width: 100%;
     @include flexbox(center, center, row);
 
+    @include mobile {
+        justify-content: space-between;
+        position: fixed;
+        background-color: $primary;
+        z-index: 1;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+
     .box-nav {
         width: 40%;
+
+        @include tablet {
+            width: 50%;
+        }
     }
 
     .logo {
-        padding-top: 1.5rem
+        padding-top: 1.5rem;
+        z-index: 2;
+
+        @include mobile {
+            img {
+                width: 230px;
+                padding-left: .5rem;
+            }
+        }
     }
 
     .items {
         @include flexbox(center, flex-end, row);
         gap: 5rem;
         padding-top: .5rem;
+
+        @include mobile {
+            z-index: 1;
+            position: fixed;
+            left: -100%;
+            top: -15px;
+            width: 80%;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            background-color: $primary;
+            padding: 0;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.5s ease-out;
+
+            &.menu-mov {
+                left: 0;
+                overflow-y: hidden;
+            }
+        }
 
         @include laptop {
             gap: 4.3rem;
@@ -41,12 +95,28 @@
         li a {
             font: normal normal 400 1.125rem/22px $nunito;
             color: $tertiary;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+
             //  transition: .4s ease-out;
             //     &:hover {
             //         color: $separator;
             //         font-weight: bold;
             //     }
         }
+    }
+
+    .hamburger {
+        width: 12%;
+        margin-top: .3rem;
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+
     }
 }
 
@@ -55,13 +125,27 @@
     width: 100%;
     @include flexbox(center, flex-start, row);
 
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+
     .buttons {
         width: 9%;
         height: 91vh;
         @include flexbox(center, center, row);
 
+        @include mobile {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: -160px;
+            bottom: -70px;
+        }
+
+
         ul {
             padding: 0;
+
 
             li {
                 width: 15px;
@@ -100,6 +184,15 @@
         flex-wrap: wrap;
         padding-top: 3rem;
 
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+
         @include laptop {
             padding: 0;
         }
@@ -108,6 +201,10 @@
             color: $tertiary;
             width: 60%;
 
+            @include mobile {
+                width: 100%;
+            }
+
             @include laptop {
                 width: 60%;
             }
@@ -115,6 +212,10 @@
             h1 {
                 font: normal normal 700 85px/90px $nunito;
                 margin: 0;
+
+                @include mobile {
+                    font-size: 50px;
+                }
 
                 @include laptop {
                     font-size: 80px;
@@ -125,6 +226,13 @@
                 font: normal normal 700 45px/50px $nunito;
                 width: 85%;
                 margin: 2rem 0 3rem 0;
+
+                @include mobile {
+                    font-size: 25px;
+                    line-height: 30px;
+                    width: 100%;
+                    margin: 1rem 0 2rem 0;
+                }
 
                 @include laptop {
                     width: 100%;
@@ -143,6 +251,11 @@
                 transition: transform .4s ease-out;
                 border: transparent;
 
+                @include mobile {
+                    padding: .5rem 1.5rem;
+                    font-size: 20px;
+                }
+
                 &:hover {
                     box-shadow: 0 7px 21px rgb(0 0 0 / 30%);
                 }
@@ -151,6 +264,10 @@
 
         .img-header {
             width: 40%;
+
+            @include mobile {
+                display: none;
+            }
 
             @include laptop {
                 width: 40%;
@@ -199,6 +316,10 @@
         @include flexbox(center, center, column);
         gap: 2rem;
 
+        @include mobile {
+            display: none;
+        }
+
         a {
             transition: .4s ease-out;
 
@@ -207,8 +328,4 @@
             }
         }
     }
-}
-
-.hamburger {
-    display: none;
 }

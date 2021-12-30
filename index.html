@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale" content="es_mx">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diseño creativo y profesional.">
+    <meta property="og:description" content="Somos un equipo de profesionales en diseño y desarrollo web.">
+    <meta property="og:url" content="http://bombilladigital.com/">
+    <meta property="og:site_name" content="Bombilla Digital">
     <title>Bombilla Digital</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
@@ -13,17 +19,19 @@
     <header class="header">
         <nav class="navegation">
             <div class="box-nav logo">
-                <a rel="noopener" href="#">
+                <a rel="noopener" href="index.html">
                     <img src="img/logo.png" alt="logo bombilla digital">
                 </a>
             </div>
-            <ul class="box-nav items">
-                <li><a rel="noopener" href="#services">Servicios</a></li>
-                <li><a rel="noopener" href="#about">Quiénes Somos</a></li>
-                <li><a rel="noopener" href="#plans">Planes</a></li>
-                <li><a rel="noopener" href="#contact">Contacto</a></li>
+            <ul id="items" class="box-nav items">
+                <li><a class="links" rel="noopener" href="#services">Servicios</a></li>
+                <li><a class="links" rel="noopener" href="#about">Quiénes Somos</a></li>
+                <li><a class="links" rel="noopener" href="#plans">Planes</a></li>
+                <li><a class="links" rel="noopener" href="#contact">Contacto</a></li>
             </ul>
-            <div class="hamburger"></div>
+            <div id="menu-mov" class="hamburger">
+                <img src="img/hamburger.png" alt="">
+            </div>
         </nav>
         <section class="header-content">
             <div class="buttons">
@@ -37,7 +45,7 @@
                 <div class="text-header">
                     <h1>¡Hola!</h1>
                     <h2>Somos un equipo de profesionales en diseño y desarrollo web</h2>
-                    <a rel="noopener" href="#">Agenda tu asesoría
+                    <a rel="noopener" href="#contact">Agenda tu asesoría
                     </a>
                 </div>
                 <div class="img-header">
@@ -51,16 +59,16 @@
                 </div>
             </div>
             <div class="social-header">
-                <a rel="noopener" href="#">
+                <a rel="noopener" target="_blank" href="https://www.facebook.com/bombilladigital">
                     <img src="img/facebook-white.png" alt="icon social" title="Facebook Bombilla Digital">
                 </a>
-                <a rel="noopener" href="#">
+                <a rel="noopener" target="_blank">
                     <img src="img/twitter-white.png" alt="icon social" title="Twitter Bombilla Digital">
                 </a>
-                <a rel="noopener" href="#">
+                <a rel="noopener" target="_blank">
                     <img src="img/instagram-white.png" alt="icon social" title="Instagram Bombilla Digital">
                 </a>
-                <a rel="noopener" href="#">
+                <a rel="noopener" href="mailto:info@bombilladigital.com">
                     <img src="img/email-white.png" alt="icon social" title="Email Bombilla Digital">
                 </a>
             </div>
@@ -137,10 +145,10 @@
             <form class="box-form" action="">
                 <h2>¡Cotiza hoy mismo!</h2>
                 <div class="bar"></div>
-                <input type="text" name="" id="" placeholder="Nombre*">
-                <input type="tel" name="" id="" placeholder="Telefóno*">
-                <input type="text" name="" id="" placeholder="Empresa*">
-                <input type="email" name="" id="" placeholder="Correo electrónico*">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre*">
+                <input type="tel" name="tel" id="tel" placeholder="Telefóno*">
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa*">
+                <input type="email" name="correo" id="correo" placeholder="Correo electrónico*">
                 <button type="submit">Solicitar cotización</button>
             </form>
         </div>
@@ -232,19 +240,19 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="box-social">
-            <a rel="noopener" href="#">
+            <a rel="noopener" href="https://www.facebook.com/bombilladigital">
                 <img src="img/facebook.png" alt="icon social" title="Facebook Bombilla Digital">
             </a>
-            <a rel="noopener" href="#">
+            <a rel="noopener" target="_blank">
                 <img src="img/twiteer.png" alt="icon social" title="Twitter Bombilla Digital">
             </a>
-            <a rel="noopener" href="#">
+            <a rel="noopener" target="_blank">
                 <img src="img/instagram.png" alt="icon social" title="Instagram Bombilla Digital">
             </a>
-            <a rel="noopener" href="#">
+            <a rel="noopener" href="mailto:info@bombilladigital.com">
                 <img src="img/email.png" alt="icon social" title="Email Bombilla Digital">
             </a>
-            <a rel="noopener" href="#">
+            <a rel="noopener" target="_blank">
                 <img src="img/whatsapp.png" alt="icon social" title="Whatsap Bombilla Digital">
             </a>
         </div>
@@ -252,6 +260,8 @@
         <p>Copyright 2021 | <a href="#">Aviso de privacidad</a></p>
     </footer>
     <!-- END FOOTER -->
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

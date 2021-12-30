@@ -14,7 +14,7 @@
 
 //MEDIA QUERYS
 @mixin mobile {
-    @media screen and (max-width: $screen-xs){
+    @media screen and (max-width: $screen-md){
         @content;
     }
 }

@@ -20,6 +20,14 @@
         @include mobile {
             gap: 2rem;
         }
+
+        a img {
+            transition: .4s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
     p,
