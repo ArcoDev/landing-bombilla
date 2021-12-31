@@ -138,4 +138,16 @@
             }
         }
     }
+
+    .message-box {
+        &.error {
+            @include messageBox(#842029, #f8d7da, #f5c2c7);
+            display: block;
+        }
+
+        &.success {
+            @include messageBox(#0f5132, #d1e7dd, #badbcc);
+            display: block;
+        }
+    }
 }
